@@ -1,5 +1,6 @@
 int dirpin = 2;
 int steppin = 3;
+int speed = 500;
 
 void setup() 
 {
@@ -19,7 +20,7 @@ void loop()
   {
     digitalWrite(steppin, LOW);  // This LOW to HIGH change is what creates the
     digitalWrite(steppin, HIGH); // "Rising Edge" so the easydriver knows to when to step.
-    delayMicroseconds(500);      // This delay time is close to top speed for this
+    delayMicroseconds(speed);      // This delay time is close to top speed for this
   }                              // particular motor. Any faster the motor stalls.
 
   digitalWrite(dirpin, HIGH);    // Change direction.
@@ -30,7 +31,7 @@ void loop()
   {
     digitalWrite(steppin, LOW);  // This LOW to HIGH change is what creates the
     digitalWrite(steppin, HIGH); // "Rising Edge" so the easydriver knows to when to step.
-    delayMicroseconds(500);      // This delay time is close to top speed for this
+    delayMicroseconds(speed);      // This delay time is close to top speed for this
   }                              // particular motor. Any faster the motor stalls.
 
 }
